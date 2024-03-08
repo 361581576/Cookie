@@ -1,4 +1,4 @@
-hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.com, app.bilibili.com, m.bilibili.com, xmc.ximalaya.com, ngabbs.com, iacc.rec.qq.com, api.m.jd.com , *.amap.com, api.tuhu.cn, , , , , , 
+hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.com, app.bilibili.com, m.bilibili.com, xmc.ximalaya.com, ngabbs.com, iacc.rec.qq.com, api.m.jd.com , *.amap.com, api.tuhu.cn,  music.163.com, mvip.midea.cn, apph5.manmanbuy.com, app.hbooker.com, wx.10099.com.cn, api.weibo.cn, passport.iqiyi.com, apis.folidaymall.com, game.dominos.com.cn, yunbusiness.ccb.com, i.meituan.com, crm.nestlechinese.com, testflight.apple.com, sweixin.hisense.com, cps.hisense.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com, auth.alipan.com, auth.aliyundrive.com, zxcstxt.com, api.hellobike.com, mall.meituan.com, sytgate.jslife.com.cn, hweb-personalcenter.huazhu.com, dm.yeemiao.com, api.tuhu.cn, qmwebapi.qmai.cn, webapi.qmai.cn, api.cloud.189.cn, api-ipv6.app.acfun.cn, *.acfun.cn, *.app.acfun.cn, h5.if.qidian.com, *.xbiao.com, miniapp.yaduo.com, yuchen.tonghuaios.com, ios.songshuyouxi.com, as.hypergryph.com, zonai.skland.com, bbs-api.mihoyo.com, api-takumi.mihoyo.com, example.com, *.amap.com, , , , , 
 # 爱奇艺 cookie
 ^https?:\/\/passport\.iqiyi\.com\/apis\/user\/ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/iQIYI.js
 
@@ -31,10 +31,125 @@ hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.c
 ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 #途虎养车小程序获取clook
-#https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 #途虎养车签到获取cookie
 https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-header https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
 
+# 获取网易云音乐人签到需要的各项参数
+https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes url script-request-body https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
+
+# 获取美的会员签到需要的各项参数
+https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo url script-request-header https://gist.githubusercontent.com/Sliverkiss/3c0239a09cbe381c572a826a5caf5621/raw/midea.js
+
+# 慢慢买每日签到
+https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
+
+# 获取刺猬猫签到需要的各项参数
+https:\/\/app\.hbooker\.com\/task\/get_all_task_list url script-request-body https://gist.githubusercontent.com/Sliverkiss/30fdcccce0b9ea6f248e49adf3aa8ea9/raw/hbooker.js
+
+# 获取ChinaBroadnet需要的各项参数
+https://wx.10099.com.cn/contact-web/api/busi/qryUserInfo url script-request-body https://github.com/wuhuhuuuu/study/raw/main/Scripts/ChinaBroadnet/ChinaBroadnet.cookie.js
+
+# 获取微博超话签到需要的各项参数
+https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) url script-request-header https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
+
+# 获取爱奇艺签到需要的各项参数
+https:\/\/passport\.iqiyi\.com\/apis\/user\/ url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+# 获取托迈酷客签到需要的各项参数
+https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
+
+# 获取达乐美披萨需要的各项参数
+https:\/\/game\.dominos\.com\.cn\/loong\/game\/gameDone url script-request-body https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+
+# 获取建行生活签到需要的各项参数
+https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin) url script-request-body https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
+
+# 使用方法2：美团APP -> 首页 -> 红包签到 -> 手动签到一次
+https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+
+# 获取雀巢会员俱乐部签到需要的各项参数
+https:\/\/crm.nestlechinese.com\/openapi\/pointsservice\/api\/Points\/getuserbalance url script-request-header https://gist.githubusercontent.com/Sliverkiss/f533ada8d658a0cbbe4b2e791c3b0ac8/raw/be3d9b74fe1cde69e6d39b599e5526110c996958/nestle.js
+
+# 获取自动加入 TestFlight需要的各项参数
+https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js
+
+# 获取海信爱家签到需要的各项参数
+https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
+https:\/\/cps\.hisense\.com\/customerAth\/activity-manage\/activityUser\/(participate|noLoginCheck) url script-request-body https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
+
+# 百度贴吧每日自动签到
+https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+
+# 获取什么值得买任务需要的各项参数
+https?:\/\/user-api\.smzdm\.com\/checkin$ url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
+
+# 获取阿里云盘签到需要的各项参数
+https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token url script-request-body https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+
+# 获取阿里云盘签到需要的各项参数
+https:\/\/zxcstxt\.com\/user\/ url script-request-header https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js
+
+# 获取哈啰单车奖励金签到需要的各项参数
+https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo url script-request-body https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js
+
+# 获取美团买菜任务需要的各项参数
+https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? url script-request-header https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
+
+# 获取捷停车签到需要的各项参数
+https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info url script-request-body https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js
+
+# 获取华住会签到需要的各项参数
+https?:\/\/hweb-personalcenter\.huazhu\.com\/login\/autoLogin$ url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/task/hzh.js
+
+# 获取小豆苗签到需要的各项参数
+https?:\/\/dm\.yeemiao\.com\/common\/newmsg\/getUnReadTotalNum$ url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/task/xdm.js
+
+# 获取途虎养车签到需要的各项参数
+https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+
+# 获取霸王茶姬签到需要的各项参数
+https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info url script-request-header https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js
+
+# 获取天翼云盘签到需要的各项参数
+https:\/\/api\.cloud\.189\.cn\/mkt\/userSign\.action? url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/ty.cookie.js
+
+# 获取AcFun签到需要的各项参数
+https?:\/\/api-ipv6\.app\.acfun\.cn\/rest\/app\/user\/(signIn|hasSignedIn|getSignInInfos) url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/acfun.cookie.js
+
+# 获取起点读书任务需要的各项参数
+https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch url script-request-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.cookie.js
+https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/mainPage url script-response-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.taskId.js
+
+# 获取腕表之家签到需要的各项参数
+https:\/\/\w+\.xbiao\.com\/apps\/\w+/.+\/home\/center/$ url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/task/wbzj.js
+
+# 获取亚朵酒店签到需要的各项参数
+https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+ url script-request-header https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/e399523e428f3c173ec4b95c892725006c3128ff/adjd.js
+
+# 获取雨晨ios签到需要的各项参数
+https:\/\/yuchen.tonghuaios.com\/users\?.+ url script-request-header https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js
+
+# 获取松鼠ios签到需要的各项参数
+https\:\/\/ios\.songshuyouxi\.com\/user url script-request-header https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/sxios.js
+
+# 获取森空岛签到需要的各项参数
+https://as.hypergryph.com/user/info/v1/basic url script-response-body https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland.token.js
+https://zonai.skland.com/api/v1/game url script-request-header https://raw.githubusercontent.com/kayanouriko/quantumultx-skland-auto-sign/main/src/skland.token.js
+
+# 获取米游币任务功能需要的 cookie
+https://bbs-api.mihoyo.com/apihub/api/getGameList url script-request-header https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.cookie.js
+
+# 获取签到功能需要的 cookie
+https://api-takumi.mihoyo.com/binding/api/getUserGameRoles url script-request-header https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.cookie.js
+
+# 脚本设置自定义
+https://example.com/? url script-request-header https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.config.js
+
+# 获取高德地图签到需要的各项参数
+https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 
 
