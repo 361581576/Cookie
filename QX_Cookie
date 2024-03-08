@@ -1,6 +1,8 @@
 hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.com, app.bilibili.com, m.bilibili.com, xmc.ximalaya.com, ngabbs.com, iacc.rec.qq.com, api.m.jd.com , *.amap.com, api.tuhu.cn,  music.163.com, mvip.midea.cn, apph5.manmanbuy.com, app.hbooker.com, wx.10099.com.cn, api.weibo.cn, passport.iqiyi.com, apis.folidaymall.com, game.dominos.com.cn, yunbusiness.ccb.com, i.meituan.com, crm.nestlechinese.com, testflight.apple.com, sweixin.hisense.com, cps.hisense.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com, auth.alipan.com, auth.aliyundrive.com, zxcstxt.com, api.hellobike.com, mall.meituan.com, sytgate.jslife.com.cn, hweb-personalcenter.huazhu.com, dm.yeemiao.com, api.tuhu.cn, qmwebapi.qmai.cn, webapi.qmai.cn, api.cloud.189.cn, api-ipv6.app.acfun.cn, *.acfun.cn, *.app.acfun.cn, h5.if.qidian.com, *.xbiao.com, miniapp.yaduo.com, yuchen.tonghuaios.com, ios.songshuyouxi.com, as.hypergryph.com, zonai.skland.com, bbs-api.mihoyo.com, api-takumi.mihoyo.com, example.com, *.amap.com, , , , , 
 # 爱奇艺 cookie
 ^https?:\/\/passport\.iqiyi\.com\/apis\/user\/ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/iQIYI.js
+# 获取爱奇艺签到需要的各项参数
+https:\/\/passport\.iqiyi\.com\/apis\/user\/ url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 # 吾爱破解 cookie
 ^https?:\/\/www\.52pojie\.cn\/home\.php\? url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/52pojie.js
@@ -10,6 +12,10 @@ hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.c
 ^https?:\/\/c\.tieba\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/TieBa.js
 #贴吧获取cookie 网页版
 ^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
+# 百度贴吧每日自动签到
+https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
 # BiliBili cookie
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
@@ -53,9 +59,6 @@ https://wx.10099.com.cn/contact-web/api/busi/qryUserInfo url script-request-body
 # 获取微博超话签到需要的各项参数
 https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) url script-request-header https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
 
-# 获取爱奇艺签到需要的各项参数
-https:\/\/passport\.iqiyi\.com\/apis\/user\/ url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
-
 # 获取托迈酷客签到需要的各项参数
 https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
 
@@ -77,11 +80,6 @@ https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ ur
 # 获取海信爱家签到需要的各项参数
 https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
 https:\/\/cps\.hisense\.com\/customerAth\/activity-manage\/activityUser\/(participate|noLoginCheck) url script-request-body https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
-
-# 百度贴吧每日自动签到
-https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
 # 获取什么值得买任务需要的各项参数
 https?:\/\/user-api\.smzdm\.com\/checkin$ url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js
@@ -106,9 +104,6 @@ https?:\/\/hweb-personalcenter\.huazhu\.com\/login\/autoLogin$ url script-reques
 
 # 获取小豆苗签到需要的各项参数
 https?:\/\/dm\.yeemiao\.com\/common\/newmsg\/getUnReadTotalNum$ url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/task/xdm.js
-
-# 获取途虎养车签到需要的各项参数
-https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
 # 获取霸王茶姬签到需要的各项参数
 https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info url script-request-header https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js
@@ -148,8 +143,6 @@ https://api-takumi.mihoyo.com/binding/api/getUserGameRoles url script-request-he
 # 脚本设置自定义
 https://example.com/? url script-request-header https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.config.js
 
-# 获取高德地图签到需要的各项参数
-https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 
 
