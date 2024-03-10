@@ -1,4 +1,4 @@
-hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.com, app.bilibili.com, m.bilibili.com, xmc.ximalaya.com, ngabbs.com, iacc.rec.qq.com, api.m.jd.com , *.amap.com, api.tuhu.cn,  music.163.com, mvip.midea.cn, apph5.manmanbuy.com, app.hbooker.com, wx.10099.com.cn, api.weibo.cn, passport.iqiyi.com, apis.folidaymall.com, game.dominos.com.cn, yunbusiness.ccb.com, i.meituan.com, crm.nestlechinese.com, testflight.apple.com, sweixin.hisense.com, cps.hisense.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com, auth.alipan.com, auth.aliyundrive.com, zxcstxt.com, api.hellobike.com, mall.meituan.com, sytgate.jslife.com.cn, hweb-personalcenter.huazhu.com, dm.yeemiao.com, api.tuhu.cn, qmwebapi.qmai.cn, webapi.qmai.cn, api.cloud.189.cn, api-ipv6.app.acfun.cn, *.acfun.cn, *.app.acfun.cn, h5.if.qidian.com, *.xbiao.com, miniapp.yaduo.com, yuchen.tonghuaios.com, ios.songshuyouxi.com, as.hypergryph.com, zonai.skland.com, bbs-api.mihoyo.com, api-takumi.mihoyo.com, example.com, *.amap.com, , , , , 
+hostname = passport.iqiyi.com, www.52pojie.cn, tiebac.baidu.com, c.tieba.baidu.com, app.bilibili.com, m.bilibili.com, xmc.ximalaya.com, ngabbs.com, iacc.rec.qq.com, api.m.jd.com , *.amap.com, api.tuhu.cn,  music.163.com, mvip.midea.cn, apph5.manmanbuy.com, app.hbooker.com, wx.10099.com.cn, api.weibo.cn, passport.iqiyi.com, apis.folidaymall.com, game.dominos.com.cn, yunbusiness.ccb.com, i.meituan.com, crm.nestlechinese.com, testflight.apple.com, sweixin.hisense.com, cps.hisense.com, c.tieba.baidu.com, tiebac.baidu.com, user-api.smzdm.com, auth.alipan.com, auth.aliyundrive.com, zxcstxt.com, api.hellobike.com, mall.meituan.com, sytgate.jslife.com.cn, hweb-personalcenter.huazhu.com, dm.yeemiao.com, api.tuhu.cn, qmwebapi.qmai.cn, webapi.qmai.cn, api.cloud.189.cn, api-ipv6.app.acfun.cn, *.acfun.cn, *.app.acfun.cn, h5.if.qidian.com, *.xbiao.com, miniapp.yaduo.com, yuchen.tonghuaios.com, ios.songshuyouxi.com, as.hypergryph.com, zonai.skland.com, bbs-api.mihoyo.com, api-takumi.mihoyo.com, example.com, *.amap.com, api.660pp.com, , , , 
 # 爱奇艺 cookie
 ^https?:\/\/passport\.iqiyi\.com\/apis\/user\/ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/iQIYI.js
 # 获取爱奇艺签到需要的各项参数
@@ -143,7 +143,7 @@ https://api-takumi.mihoyo.com/binding/api/getUserGameRoles url script-request-he
 # 脚本设置自定义
 https://example.com/? url script-request-header https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs.config.js
 
-
-
+#PP停车
+^https:\/\/api\.660pp\.com\/rest\/[\d\.]+?\/user\/token url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/pp_parking.js
 
 
