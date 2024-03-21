@@ -40,6 +40,11 @@ https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script
 https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 #途虎养车签到获取cookie
 https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-header https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
+#途虎养车小程序获取cookie(Fokit)
+https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
+
+# BoxJs订阅：https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
+
 
 # 获取网易云音乐人签到需要的各项参数
 https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes url script-request-body https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
